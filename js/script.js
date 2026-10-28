@@ -10,6 +10,8 @@ let tarefas = [];
 let proximoId = 1;
 
 document.addEventListener('click', (event) => {
+
+
     if (event.target.id === 'adicionar') {
         event.preventDefault();
 
@@ -36,11 +38,7 @@ document.addEventListener('click', (event) => {
     if (event.target.className === 'excluir') {
         const id = Number(event.target.dataset.id);
 
-        for (let i = 0; i < tarefas.length; i++) {
-            if (tarefas[i].id === id) {
-                tarefas.splice(i, 1);
-            }
-        }
+        tarefas = tarefas.filter((item) => item.id !== id);
     }
 
     resultado.textContent = '';
