@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <main>
+
+        <div class="stars"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+
+        <h1>Lista de Tarefas</h1>
+
+        <form>
+            <label for="tarefa">Adicionar tarefa:</label>
+            <input type="text" id="tarefa" placeholder="Digite a tarefa desejada" />
+
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" placeholder="Digite a descrição da tarefa" />
+
+            <label for="data">Data de entrega:</label>
+            <input type="date" id="data" />
+
+            <button type="submit" id="adicionar">Adicionar</button>
+
+            <p id="mensagem" class="erro" hidden>Tarefa incorreta. Tente novamente!</p>
+        </form>
+
+        <table id="tabela" hidden>
+            <thead>
+                <tr>
+                    <th>Tarefa</th>
+                    <th>Descrição</th>
+                    <th>Entrega</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="lista-tarefas"></tbody>
+        </table>
+
+        <p id="vazia" class="resultado">Não há tarefas cadastradas</p>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>

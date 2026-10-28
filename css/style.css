@@ -1,7 +1,137 @@
 :root {
-    --cor-fundo: #ffffff;
-    --cor-superficie: #ffffff;
-    --cor-texto: #000000;
-    --cor-principal: #000000;
-    --cor-perigo: #ff0000;
+    --cor-fundo: #f3eee4;
+    --cor-superficie: #fffdf8;
+    --cor-texto: #2e2a25;
+    --cor-principal: #2f5d50;
+    --cor-perigo: #b3261e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--cor-principal);
+    color: var(--cor-principal);
+    font-size: 32px;
+}
+
+form {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-texto);
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-texto);
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 2px solid var(--cor-principal);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--cor-principal);
+    color: var(--cor-superficie);
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#adicionar {
+    width: 100%;
+}
+
+.erro {
+    margin-top: 10px;
+    color: var(--cor-perigo);
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--cor-superficie);
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid var(--cor-texto);
+    font-size: 15px;
+    text-align: left;
+    word-break: break-word;
+}
+
+th {
+    background-color: var(--cor-principal);
+    color: var(--cor-superficie);
+}
+
+td:nth-child(3),
+td button {
+    white-space: nowrap;
+}
+
+td button {
+    padding: 4px 10px;
+    background-color: var(--cor-perigo);
+    font-size: 14px;
+}
+
+p.resultado {
+    padding: 15px;
+    border: 1px dashed var(--cor-texto);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #adicionar {
+        width: auto;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
 }
